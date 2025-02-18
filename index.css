@@ -1,0 +1,919 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: "Noto Sans KR", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+ol,ul,li{list-style: none;}
+a{text-decoration: none; color: black;}
+button{all: unset; text-align: center; cursor: pointer;}
+
+#wrapper{
+    width: 100%;
+    max-width: 1300px;
+    height: 2000px;
+    max-height: 2000px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+/*header*/
+.header{
+    width: 100%;
+    height: 5%;
+    align-items: center;
+}
+#header-1{
+    display: flex;
+    width: 100%;
+    height: 40%;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-bottom: 15px;
+}
+#header-1 a{
+
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 3px;
+    
+}
+#header-1 a:hover{
+    outline: 1px solid rgb(5, 5, 168);
+    border-radius: 5px;
+}
+#header-2{
+    position :relative;
+    display: flex;
+    width: 100%;
+    height: 60%;
+    align-items: center;
+}
+#header-2>#logo{
+    width: 20%;
+    height: 100%;
+    align-items: center;
+}
+#header-2>#logo>a{
+    display: inline-block;
+    width: 160px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background: url(./image/korean\ air\ logo.png) no-repeat center/contain;
+}
+#header-2>#logo img{
+    width: 160px;
+    height: 40px;
+}
+#header-2>#nav{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;    
+}
+#header-2>#nav>ul{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    font-size: 22px;
+    font-weight: 200;
+    align-items: center;
+}
+
+#header-2>#nav>ul>li>a{
+    display: inline-block;
+    padding: 0 60px 0 20px;
+    font-weight: 400;
+    height: 60px;
+}
+
+#header-2>#nav>ul>li>a:hover{
+    font-weight: 600;
+}
+
+#header-2>#nav>ul a:nth-child(1):hover + #reservation-div{
+    display: block;
+    display: flex;
+}
+
+#reservation-div:hover{
+    display:block;
+    display: flex;
+}
+
+#reservation-div{
+    position : absolute;
+    top : 100%;
+    left:0;
+    background: white;
+    width: 1300px;
+    height: 290px;
+    display: none;
+    z-index: 100;
+    border-top: 1px solid gray;
+    padding-top: 20px;
+}
+
+#reservation-div>#r-ul{
+    width: 75%;
+}
+
+#reservation-div a:hover{
+    text-decoration: underline;
+}
+
+#r-ul>ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+#r-ul>ul>li{
+    width: 200px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+#r-ul>ul>li>ul{
+    padding: 0;
+}
+
+#r-ul>ul>li>ul>a{
+    margin-bottom: 30px;
+}
+
+
+#r-ul>ul>li>ul>li>a{
+    color: gray;
+}
+
+#reservation-div>#r-pic{
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#r-pic>a>img{
+    border-radius: 5px;
+    width: 240px;
+    height: 110px;
+}
+
+#r-pic>a>img:hover{
+    outline: 1px solid rgb(33, 33, 196);
+}
+
+#header-2>#nav>ul a:hover + #travel-div{
+    display: block;
+    display: flex;
+}
+
+#travel-div:hover{
+    display:block;
+    display: flex;
+}
+
+#travel-div{
+    position : absolute;
+    top : 100%;
+    left:0;
+    background: white;
+    width: 1300px;
+    height: 370px;
+    display: none;
+    z-index: 100;
+    border-top: 1px solid gray;
+    padding-top: 20px;
+}
+
+#travel-div>#t-ul{
+    width: 75%;
+}
+
+#travel-div a:hover{
+    text-decoration: underline;
+}
+
+#t-ul>ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+#t-ul>ul>li{
+    width: 200px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+
+#t-ul>ul>li>ul{
+    padding: 0;
+}
+
+#t-ul>ul>li>ul>a{
+    margin-bottom: 30px;
+}
+
+
+#t-ul>ul>li>ul>li>a{
+    color: gray;
+}
+
+#travel-div>#t-pic{
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#t-pic>a>img{
+    border-radius: 5px;
+    width: 240px;
+    height: 110px;
+}
+
+#t-pic>a>img:hover{
+    outline: 1px solid rgb(33, 33, 196);
+}
+
+#header-2>#nav>ul a:hover + #sky-div{
+    display: block;
+    display: flex;
+}
+
+#sky-div:hover{
+    display:block;
+    display: flex;
+}
+
+#sky-div{
+    position : absolute;
+    top : 100%;
+    left:0;
+    background: white;
+    width: 1300px;
+    height: 300px;
+    display: none;
+    z-index: 100;
+    border-top: 1px solid gray;
+    padding-top: 20px;
+}
+
+
+#sky-div>#s-ul{
+    width: 75%;
+}
+
+#sky-div a:hover{
+    text-decoration: underline;
+}
+
+#s-ul>ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+#s-ul>ul>li{
+    width: 200px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+
+#s-ul>ul>li>ul{
+    padding: 0;
+}
+
+#s-ul>ul>li>ul>a{
+    margin-bottom: 30px;
+}
+
+
+#s-ul>ul>li>ul>li>a{
+    color: gray;
+}
+
+#sky-div>#s-pic{
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#s-pic>a>img{
+    border-radius: 5px;
+    width: 240px;
+    height: 110px;
+}
+
+#s-pic>a>img:hover{
+    outline: 1px solid rgb(33, 33, 196);
+}
+
+#header-2>#util{
+    display: flex;
+    width: 25%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+#header-2>#util>input{
+    border: 1px solid rgb(5, 5, 168);
+    border-radius: 5px;
+    height: 80%;
+    padding-left: 10px;
+}
+#header-2>#util>input:hover{
+    outline: 1px solid rgb(33, 33, 196);
+    border-radius: 5px;
+    height: 80%;
+}
+#header-2>#util>input:focus{
+    border: 2px solid rgb(33, 33, 196);
+    outline: none;
+}
+#header-2>#util button{
+    width: 100px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 30px;
+    background-color: navy;
+    color: white;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+#header-2>#util button:hover{
+    outline: 1px solid rgb(33, 33, 196);
+}
+ /*로그인버튼 호버 시 테두리 생성*/
+
+ /*content*/
+ .content{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 18%;
+ }
+ .content>#bg{
+    width: 100%;
+    height: 100%;
+    background-image: url(./image/content배경.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+ }
+
+ .content>#bg>#menu{
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    padding: 10px;
+    width: 80%;  
+    height: 60%;
+    z-index: 2;
+}
+
+
+#bg>#menu-choice{
+    position: absolute;
+    top: 18%;
+    left: 10%;
+    z-index: 1;
+}
+
+#menu-choice{
+    width: 1040px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#menu-choice button{
+    background: rgb(209, 209, 209);
+    width: 255px;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+#menu-choice button:first-of-type{
+    background: white;
+}
+
+
+
+#menu-choice> button:hover {
+    text-decoration: underline;
+}
+
+
+#menu{
+    width: 100%;
+    height: 100%;
+}
+
+#menu>#menu-top{
+    display: flex;
+    width: 100%;
+    height: 40%;
+}
+
+#menu-top>#mileagechoice{
+    display: flex;
+    width: 20%;
+    align-items: center;
+}
+
+#mileagechoice>ul{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 20px;
+    justify-content: space-around;
+    margin-left: 30px;
+    padding-top: 2px;
+}
+
+#mileagechoice>ul a:hover{
+    text-decoration: underline;
+}
+
+
+#menu-top>#route-option{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    font-size: 16px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 70px;
+}
+
+#menu-top>#route-option a:hover{
+    text-decoration: underline;
+}
+
+
+#menu-top>#route-option>ul{
+    display: flex;
+    gap: 10px;
+}
+
+
+#menu-top>#date-option{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu>#menu-bottom{
+    display: flex;
+    width: 100%;
+    height: 60%;
+}
+
+#menu-bottom>#location{
+    display: flex;
+    width: 25%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+#location>#from p:nth-child(1){
+    font-size: 24px;
+}
+#location>#from p:nth-child(2){
+    font-size: 12px;
+}
+#location>#to p:nth-child(1){
+    font-size: 24px;
+}
+#location>#to p:nth-child(2){
+    font-size: 12px;
+}
+#menu-bottom>#date{
+    display: flex;
+    width: 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
+}
+
+#date>input{
+    border-radius: 5px;
+    margin: auto 0;
+    height: 40%;
+}
+#date>label{
+    display: flex;
+    align-items: center;
+    height: 50%;
+    color: gray;
+    
+}
+#menu-bottom>#person{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    color: gray;
+    align-items: center;
+}
+#menu-bottom>#person>p{
+    width: 100%;
+    text-align: center;
+}
+#menu-bottom>#person input{
+    width: 60%;
+    text-align: center;
+    color: black;
+    border-radius: 3px;
+}
+
+#menu-bottom>#seat{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    align-items: center;
+}
+
+#seat p{
+    width: 100%;
+    text-align: center;
+    color: gray;
+    padding-bottom: 23px;
+}
+
+#seat>select{
+    border-radius: 3px;
+    width: 80%;
+}
+
+
+#menu-bottom>#submit{
+    width: 13%;
+}
+
+#search-flight{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#menu-bottom>#search-flight button{
+    width: 150px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: navy;
+    color: white;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+#search-flight button:hover{
+    outline: 1px solid rgb(33, 33, 196);
+}
+
+/* content2 */
+.content2{
+    padding-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 13%;
+    justify-content: space-between;
+}
+
+.content2 > #c2-1 > a{
+    display: block;
+    border-radius: 20px;
+    width: 400px;
+    height: 180px;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-image: url(./image/기프트카드.PNG);
+    transition: transform 0.3s ease;  
+}
+
+.content2 > #c2-1 > p{
+    padding: 10px;
+    text-align: center;
+}
+
+.content2 > #c2-1 > a:hover {
+    transform: scale(1.01);
+    box-shadow: 2px 2px 2px rgb(170, 167, 167);
+}
+
+
+.content2 > #c2-2 > a{
+    display: block;
+    border-radius: 20px;
+    width: 400px;
+    height: 180px;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-image: url(./image/신규취항.PNG);
+    transition: transform 0.3s ease; 
+}
+
+.content2 > #c2-2 > p{
+    padding: 10px;
+    text-align: center;
+}
+
+.content2 > #c2-2 > a:hover {
+    transform: scale(1.01);
+    box-shadow: 2px 2px 2px rgb(170, 167, 167);
+}
+
+.content2 > #c2-3>a{
+    display: block;
+    border-radius: 20px;
+    width: 400px;
+    height: 180px;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-image: url(./image/코트.PNG);
+    transition: transform 0.3s ease; 
+}
+
+.content2 > #c2-3 > p{
+    padding: 10px;
+    text-align: center;
+}
+
+.content2 > #c2-3 > a:hover {
+    transform: scale(1.01);
+    box-shadow: 2px 2px 2px rgb(170, 167, 167);
+}
+
+.content3 {
+    display: flex;
+    width: 100%;
+    height: 18%;
+}
+
+.content3 > #note {
+    width: 55%;
+    margin-top: 12px;
+    margin-left: 20px;
+}
+
+#note  a {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 18px 0;
+}
+
+#note a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+#note a span{
+    font-size: 12px;
+    color: gray;
+    padding-right: 10px;
+    text-decoration: none;
+}
+
+#note hr {
+    width: 90%;
+}
+
+.content3 > #ad {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ad > #ad1 {
+    display: block;
+    background-image: url(./image/ad.PNG);
+    width: 450px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+#ad1:hover{
+    outline: 2px solid rgb(5, 5, 168); ;
+}
+
+.content4{
+    width: 100%;
+    height: 10%;
+    background-color: #d0e7f6;
+    padding-top: 10px;
+    border-radius: 8px;
+}
+
+.content4 > #content4-header{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    margin-top: 5px;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    align-items: center;
+    font-size: 30px;
+}
+
+
+#list-card {
+    display: flex;
+    justify-content: space-around;
+}
+
+#list-card li {
+    display: flex;
+    flex-direction: column;
+    border-radius: 13px;
+    width: 140px;
+    height: 120px;
+    background-color:#E8F3FB ;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 23px;
+    text-align: center;
+}
+
+#list-card li img {
+    width: 30px;
+    height: 30px;
+}
+
+#list-card li:hover{
+    cursor: pointer;
+    background-color: white;
+    text-decoration: underline;
+}
+
+.footer{
+    width: 100%;
+    height: 15%;
+}
+
+.footer>#footer-list{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 20px;
+}
+
+#footer-list>div{
+    display: flex;
+    justify-content: space-around;
+    width: 250px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+}
+
+#footer-list>div>li{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#footer-list>div>li>ul>li>a{
+    display: inline-block;
+    font-size: 14px;
+    color: gray;
+}
+
+#footer-list>div>li>ul>li:nth-child(1){
+    padding-top: 20px;
+}
+
+
+#footer-list a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#footer-list>div>li>ul>li{
+    padding: 13px 0;
+}
+
+#list-privacy{
+    font-weight: bold !important;
+    color: rgb(84, 83, 83) !important;
+}
+#footer-list a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+#footer-end{
+    padding-left: 30px;
+    padding-top: 20px;
+    width: 100%;
+}
+#footer-1{
+    padding-bottom: 30px;
+}
+
+#footer-1>a:nth-child(2){
+    margin-right: 50px;
+}
+
+#footer-1>a>img:hover{
+    outline: 1px solid rgb(5, 5, 168);
+    border-radius: 3px;
+}
+
+#footer-1>a:nth-child(n+3){
+    margin-left: 20px;
+
+}
+
+
+#footer-1>a:nth-child(n+3)>img{
+    width: 36px;
+    height: 36px;
+}
+
+#footer-1>a:nth-child(6)>img{
+    width: 35px;
+    height: 35px;
+    margin-bottom: 1px;
+    margin-left: 1px;
+}
+
+#footer-2{
+    display: flex;
+    width: 100%;
+
+}
+#footer-2>#f-2-1{
+    width: 80%;
+    font-size: 13px;
+}
+#footer-2>#f-2-1 p b{
+    font-weight: 900;
+}
+
+#footer-2>#f-2-1 p span::after{
+    content: "|";
+    color: rgb(192, 192, 192);
+    padding-left: 8px;
+    padding-right: 3px;
+}
+
+#footer-2>#f-2-1>p:last-child{
+    color: gray;
+    font-size: 11px;
+    padding-top: 20px;
+}
+
+#footer-2>#f-2-2{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items:flex-end
+}
+
+#f-2-2>a{
+    margin-left: 5px;
+}
+
+#f-2-2>a:hover{
+    outline: 1px solid rgb(5, 5, 168);
+    border-radius: 3px;
+}
